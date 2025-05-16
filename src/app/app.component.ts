@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'lifeCycleMethods';
+
+  demoDestroyed: boolean = false;
+
+  inputText: string = '';
+
+  OnSubmit(inputEl: HTMLInputElement) {
+    this.inputText = inputEl.value
+  }
+
+  destroyDemo() {
+    this.demoDestroyed = true;
+  }
 }

@@ -1,5 +1,6 @@
 <div class="container">
   <input type="text" #input>
   <button (click)="OnSubmit(input)">Принять</button>
-  <app-demo></app-demo>
+  <app-demo [value]="inputText" *ngIf="!demoDestroyed"><h4>Контент для демо {{ inputText }}</h4></app-demo>
+  <button (click)="destroyDemo()" [disabled]="demoDestroyed">Убрать демо компонент</button>
 </div>
